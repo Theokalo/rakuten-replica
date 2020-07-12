@@ -1,0 +1,80 @@
+.main_carousel {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 3%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+.card_carousel {
+    /* background-color: #fff; */
+    min-width: 100%;
+    min-height: 400px;
+    display: flex;
+    overflow-x: hidden;
+}
+  
+.card_carousel--content {
+    background-image: url("../../assets/movie_icon.png");
+    min-width: 100%;
+    cursor: pointer;
+    -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, 
+    color-stop(1.00,  rgba(255, 255, 255, 0)),
+    color-stop(0.00,  rgb(255, 255, 255, 1))
+   );
+}
+
+.title_carousel_div {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 9;
+}
+
+.title_carousel_div {
+    font-weight: bold;
+    font-size: 130%;
+    color: #ffffff;
+}
+
+.prev_carousel, .next_carousel {
+    padding-top: 140px;
+    padding-bottom: 10px;
+    height: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.6s ease;
+    display: none;
+}
+.prev_carousel {
+    position: absolute;
+    left: 20px;
+    z-index: 1;
+}
+.next_carousel {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+}
+.prev_carousel:hover, .next_carousel:hover {
+    height: 100%;
+}
+
+.main_carousel:hover > .prev_carousel{
+    display: inline;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.main_carousel:hover > .next_carousel{
+    display: inline;
+    cursor: pointer;
+    transition: 1s ease;
+}

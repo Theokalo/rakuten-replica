@@ -1,0 +1,9 @@
+.container_home {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.title {
+    color: #ffffff;
+    padding-left: 17px;
+}

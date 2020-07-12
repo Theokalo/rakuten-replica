@@ -1,0 +1,173 @@
+.main {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+    /* background-color: #fff; */
+    padding-left: 15px;
+    min-width: 100%;
+    min-height: 250px;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.card--content {
+    background-image: url("../../assets/movie_icon.png");
+    box-shadow: 0px 0px 0px 0px  #ffe300;
+    transition: box-shadow 0.6s linear;
+    border-radius: 5px;
+    min-width: 200px;
+    margin: 5px;
+}
+
+.card--content:hover {
+  box-shadow: 0px 0px 0px 5px  #ffe300;
+  cursor: pointer;
+}
+
+.tooltip {
+  display:inline-block;
+  position:relative;
+  text-align:left;
+}
+
+.tooltip h3 {margin:12px 0;}
+
+.tooltip .right {
+  min-width:200px;
+  max-width:400px;
+  top:50%;
+  left:100%;
+  margin-left:20px;
+  transform:translate(0, -50%);
+  padding:0;
+  color:#EEEEEE;
+  background-color:rgba(0, 0, 0, 0.8);
+  font-weight:normal;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:1;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip .left {
+  min-width:200px;
+  max-width:400px;
+  top:50%;
+  right:100%;
+  margin-right:20px;
+  transform:translate(0, -50%);
+  padding:0;
+  color:#EEEEEE;
+  background-color:rgba(0, 0, 0, 0.8);
+  font-weight:normal;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:1;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip:hover .right {
+  visibility:visible; opacity:1;
+}
+
+.tooltip:hover .left {
+  visibility:visible; opacity:1;
+}
+
+.tooltip .right img {
+  width:400px;
+  border-radius:8px 8px 0 0;
+}
+
+.tooltip .left img {
+  width:400px;
+  border-radius:8px 8px 0 0;
+}
+.tooltip .text-content {
+  padding:10px 20px;
+}
+
+.tooltip .right i {
+  position:absolute;
+  top:50%;
+  right:100%;
+  margin-top:-12px;
+  width:12px;
+  height:24px;
+  overflow:hidden;
+}
+
+.tooltip .left i {
+  position:absolute;
+  top:50%;
+  left:100%;
+  margin-top:-12px;
+  width:12px;
+  height:24px;
+  overflow:hidden;
+}
+.tooltip .right i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:0;
+  top:50%;
+  transform:translate(-50%,-50%) rotate(-45deg);
+  background-color:#444444;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+.tooltip .left i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  right:0;
+  top:50%;
+  transform:translate(50%,-50%) rotate(-45deg);
+  background-color:#444444;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+/* .card::-webkit-scrollbar {
+    display: none;
+} */
+
+.prev, .next {
+  padding-top: 80px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.6s ease;
+  z-index: 2;
+}
+.next {
+  position: absolute;
+  right: 20px;
+  /* margin-left: 5px; */
+}
+.prev {
+  position: absolute;
+  left: 20px;
+}
+.prev:hover, .next:hover {
+  height: 100%;
+  /* background-color: rgba(0,0,0,0.8); */
+}
+
+.prev_hidden {
+  display: none;
+}

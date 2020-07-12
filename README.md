@@ -12,3 +12,5 @@
 If everything is set well you will something like the picture bellow.
 
 ![Image](./src/assets/Capture.PNG)
+
+Unfortunatelly the trailer endpoint it doesn't work so I couldn't make a component in order to paly the trailer of each movie.
